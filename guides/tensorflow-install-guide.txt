@@ -1,0 +1,32 @@
+1.从https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/ 找anaconda4.4.0的 下载
+2.安装,如果问是否加入环境变量，选不加
+3.以管理员身份运行anaconda promot(很重要，右击图标可选择此操作)
+4.输入：python -m pip install --upgrade pip 因为pip比较老，必须更新 到最新
+5.conda create -n tensorflow python=3.6.1（创建虚拟运行环境） 等一会它自动安装
+6.activate tensorflow （进入tensorflow 虚拟环境）
+7.打开windows的运行，输入%HOMEPATH%,你可以看到一系列文件夹，可能会有带‘.’的，然后新建pip文件夹，进入pip，新建pip.ini（名字不带txt），已记事本打开，输入以下内容：
+-------开始（这个不用输入，我只是做个标记）------
+-------------------------------------------------
+[global]
+index-url=https://pypi.tuna.tsinghua.edu.cn/simple
+[install]
+trusted-host=pypi.tuna.tsinghua.edu.cn
+--------结束-------
+-------------------
+以上内容是为了改变下载源，不然下载速度巨慢
+8.进入tensorflow虚拟环境，输入：
+pip install --upgrade tensorflow
+9.过一会应该安装好了
+10.检验操作：
+直接虚拟环境中输入：
+>>python
+>>import tensorflow as tf
+>>sess = tf.Session()
+>>a = tf.constant(10)
+>>b = tf.constant(12)
+>>sess.run(a+b)
+
+11.打开pycharm,配置tensorflow
+File->Settings->Project Interpreter->点击右上边像设置一样的按钮->add->Exsiting Environment->浏览文件，找 你的anconda安装目录\env\tensorflow\Tools\python.exe
+点击python.exe->OK.
+
