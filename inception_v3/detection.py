@@ -21,9 +21,13 @@ def detection(image_path):
 
     custom_objects = detector.CustomObjects(car=True)
     # 将检测后的结果保存为新图片
-    detections = detector.detectCustomObjectsFromImage(custom_objects=custom_objects, input_image=os.path.join(execution_path, image_path),
-                                                 output_image_path=os.path.join(execution_path,
-                                                                                image_path.split(sep='.')[0]+"_new.jpg"),
-                                                       minimum_percentage_probability=70)
+    # detections = detector.detectCustomObjectsFromImage(custom_objects=custom_objects, input_image=os.path.join(execution_path, image_path),
+    #                                              output_image_path=os.path.join(execution_path,
+    #                                                                             image_path.split(sep='.')[0]+"_new.jpg"),
+    #                                                    minimum_percentage_probability=70)
 
+    detections = detector.detectCustomObjectsFromImage(custom_objects=custom_objects,
+                                                       input_image=image_path,
+                                                       output_image_path="."+image_path.split(sep='.')[1]+"_new.jpg",
+                                                       minimum_percentage_probability=70)
     return detections
