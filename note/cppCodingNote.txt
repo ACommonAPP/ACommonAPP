@@ -2,5 +2,13 @@
 
 
 【2019年4月9日】
-1.通过安装cling来使用jupyter notebook的C++编写功能，实现C++的方便学习，进入网站https://github.con/root-project/cling.git。但是在编译cling组件的时候，ubuntu界面卡死，安装失败
-2.
+1.通过安装cling来使用jupyter notebook的C++编写功能，实现C++的方便学习，进入网站https://github.con/root-project/cling.git。
+  但是在编译cling组件的时候，ubuntu界面卡死，安装失败。之后选择在windows下安装cling组件，（在有camke3.10 的情况下），依然
+  报错：
+  Traceback (most recent call last):
+  File "./cpt.py", line 2242, in <module>
+    get_win_dep()
+  File "./cpt.py", line 1229, in get_win_dep
+    os.rename(os.path.join(tmp_bin_dir, 'cmake-3.6.2-win64-x64'), cmakeDir)
+  NameError: name 'cmakeDir' is not defined
+
