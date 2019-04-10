@@ -1,0 +1,6 @@
+1.用cin读入string时，遇到空格就会结束，后面的输入流就被抛弃了，用getline(cin,s)可以解决这个问题
+
+
+【2019年4月9日】
+1.通过安装cling来使用jupyter notebook的C++编写功能，实现C++的方便学习，进入网站https://github.con/root-project/cling.git。但是在编译cling组件的时候，ubuntu界面卡死，安装失败
+2.
